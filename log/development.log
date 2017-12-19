@@ -375,3 +375,30 @@ Processing by ArtistsController#show as HTML
   Parameters: {"id"=>"2"}
   Rendered artists/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for 66.69.239.17 at 2017-12-19 05:42:46 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `artist_name' for nil:NilClass):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= link_to song.title, song_path(song) %></li>
+    4:   <li>By: <%= display_artist(@song) %></li>
+    5: <% end %>
+    6: </ul>
+    7: <br>
+  app/helpers/songs_helper.rb:4:in `display_artist'
+  app/views/songs/index.html.erb:4:in `block in _app_views_songs_index_html_erb__1204799421992129429_70348515924540'
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb__1204799421992129429_70348515924540'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.6ms)
