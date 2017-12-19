@@ -687,3 +687,127 @@ Processing by SongsController#index as HTML
   [1m[35mSong Load (0.5ms)[0m  SELECT "songs".* FROM "songs"
   Rendered songs/index.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/songs/" for 66.69.239.17 at 2017-12-19 05:56:17 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 224ms (Views: 214.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/songs/1/edit" for 66.69.239.17 at 2017-12-19 05:56:19 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.6ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered songs/edit.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 61ms (Views: 45.2ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/songs/1" for 66.69.239.17 at 2017-12-19 05:56:25 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X0YfrhstcYI39BQByOix7l22qmdgXz5a8TqnFNYuflLZC6NifCp1UMDWnwUKeoOwUsu3H5kJFoSb7lPSTYWyrw==", "song"=>{"title"=>"Song 2", "artist_name"=>"Daft Punk"}, "commit"=>"Update Song", "id"=>"1"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://67.205.188.72:56180/songs/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/songs/1" for 66.69.239.17 at 2017-12-19 05:56:25 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.5ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/songs/1" for 66.69.239.17 at 2017-12-19 05:56:27 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for 66.69.239.17 at 2017-12-19 05:56:31 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered songs/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs/1/edit" for 66.69.239.17 at 2017-12-19 05:56:39 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered songs/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/songs/1" for 66.69.239.17 at 2017-12-19 05:57:17 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+TBWNk/lKj/ca9tSDHH+vu+xHanNl6ryKtvI4rMqnAl/fer6KOIu7StJUFbO48zg4MwA0TTBgixADzwkKIFQ9A==", "song"=>{"title"=>"Song 2", "artist_name"=>"Daft Punk"}, "commit"=>"Update Song", "id"=>"1"}
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.188.72:56180/songs/1
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/songs/1" for 66.69.239.17 at 2017-12-19 05:57:18 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs/1" for 66.69.239.17 at 2017-12-19 05:57:25 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/songs/1/edit" for 66.69.239.17 at 2017-12-19 05:57:27 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered songs/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs/1" for 66.69.239.17 at 2017-12-19 05:57:36 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/songs/1/edit" for 66.69.239.17 at 2017-12-19 05:57:48 +0000
+Cannot render console from 66.69.239.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.4ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered songs/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms)
